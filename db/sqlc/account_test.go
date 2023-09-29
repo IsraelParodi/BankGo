@@ -3,14 +3,13 @@ package db
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"testing"
 	"time"
 
 	"github.com/israelparodi/bankgo/util"
 	"github.com/stretchr/testify/require"
 )
-
-var testQueries *Queries
 
 func createRandomAccount(t *testing.T) Account {
 	args := CreateAccountParams{
@@ -20,6 +19,7 @@ func createRandomAccount(t *testing.T) Account {
 	}
 
 	account, err := testQueries.CreateAccount(context.Background(), args)
+	fmt.Println(account)
 	require.NoError(t, err)
 	require.NotEmpty(t, account)
 
