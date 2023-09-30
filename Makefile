@@ -4,6 +4,9 @@ getpostgres:
 postgres:
 	docker run --name postgres16 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secretpostgres -d postgres:16-alpine
 
+runcontainer:
+	docker start postgres16
+
 createdb:
 	docker exec -it postgres16 createdb --username=root --owner=root bank_go
 
