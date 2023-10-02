@@ -10,8 +10,12 @@ func SetupRouter() *gin.Engine {
 
 	v1 := router.Group("/v1")
 	{
-		v1.POST("/account", account.CreateAccount)
-		v1.GET("/account/:id", account.GetAccount)
+		accountGroup := v1.Group("/accounts")
+		{
+			accountGroup.POST("/", account.CreateAccount)
+			accountGroup.GET("/:id", account.GetAccount)
+			accountGroup.GET("/", account.ListAccounts)
+		}
 	}
 
 	return router
