@@ -3,10 +3,10 @@ package tests
 import (
 	"context"
 	"database/sql"
-	db "github.com/israelparodi/bankgo/db/sqlc/queries"
 	"testing"
 	"time"
 
+	db "github.com/israelparodi/bankgo/db/sqlc/queries"
 	"github.com/israelparodi/bankgo/util"
 	"github.com/stretchr/testify/require"
 )

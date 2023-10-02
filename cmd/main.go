@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/israelparodi/bankgo/api/config"
 	"github.com/israelparodi/bankgo/api/router"
+	"github.com/israelparodi/bankgo/config"
 	db "github.com/israelparodi/bankgo/db/sqlc/queries"
 	_ "github.com/lib/pq"
 )

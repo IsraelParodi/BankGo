@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/israelparodi/bankgo/api/config"
 	"github.com/israelparodi/bankgo/api/helpers"
+	"github.com/israelparodi/bankgo/config"
 	db "github.com/israelparodi/bankgo/db/sqlc/queries"
 )
 
