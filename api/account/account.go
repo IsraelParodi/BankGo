@@ -1,6 +1,7 @@
 package account
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -28,4 +29,9 @@ func CreateAccount(ctx *gin.Context) {
 	}
 
 	ctx.JSON(http.StatusOK, account)
+}
+
+func GetAccount(ctx *gin.Context) {
+	params := ctx.Params
+	fmt.Println(params)
 }
