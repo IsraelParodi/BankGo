@@ -25,7 +25,7 @@ sqlc:
 test:
 	go clean -testcache && go test -v -cover ./...
 
-server:
-	go run main.go
+start:
+	go run cmd/main.go
 
-.PHONY: postgres createdb dropdb server
+.PHONY: postgres createdb dropdb start
